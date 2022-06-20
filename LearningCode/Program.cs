@@ -1,13 +1,44 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-Console.WriteLine("Hello, World!");
+using LearningCode.DataStructures;
 
-var numbersList = new List<int>()
+var xNumber = 14;
+
+var catList = new List<Cat>();
+
+var frejyo = new Cat
 {
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    Name = "Frejyo",
+    Age = 4,
+    Breed = null
 };
 
-foreach (var number in numbersList)
+catList.Add(frejyo);
+
+var ducati = new Cat
 {
-    Console.WriteLine($"Number: {number}");
+    Name = "Ducati",
+    Age = 6,
+    Breed = "Criollo"
+};
+
+catList.Add(ducati);
+
+var noir = new Cat
+{
+    Name = "Noir",
+    Age = 0,
+    Breed = "Criollo"
+};
+
+catList.Add(noir);
+
+
+
+
+foreach (var cat in catList)
+{
+    Console.WriteLine($"Cat Name: {cat.Name}");
+    cat.DoTheDocument();
+    Console.WriteLine("------------");
 }
